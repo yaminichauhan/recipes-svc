@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "allowJs": true /* Allow javascript files to be compiled. */,
+        "allowSyntheticDefaultImports": true,
+        "checkJs": false /* Report errors in .js files. */,
+        "module": "commonjs", /* allows us to define the output module type.
+                              commonjs is the standard module format used in Node.js.*/
+        "esModuleInterop": false, /* allows usage of an alternative module import syntax.
+                                One may be using syntax like import config from 'config'; */
+        "target": "ES2016", /* The output javascript specification to adhere to */
+        "noImplicitAny": false, /* Setting this to true will throw an error when something has a default type of any.
+                               An object typed with any means that any value can be expected.
+                               Setting this to false may make more sense if you are in the process of converting Javascript to Typescript, as you work out which types to use throughout the project. */
+        "moduleResolution": "node", /* Typescript attempts to mimic Node's MODULE RESOLUTION STARTEGY.
+                                   Module Resolution Strategy is a process compiler follows to figure out what an import refers to.
+                                   For example: Consider an import statement like import { a } from "moduleA"; in order to check any use of a, the compiler needs to know exactly what it represents, and will need to check its definition moduleA.*/
+        "sourceMap": true, /* This allows us to halt execution at run time in the event we wish to debug Javascript being output, in the form of break points in source map files */
+        "outDir": "dist", /* The location to output .js files to after compilation. This is our dist/ folder. */
+        "baseUrl": ".", /* These values allow us to map more paths for Typescript to scan upon compilation. */
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "src/types/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ], /* includes an array of glob patterns of files to be included in the compilation process.*/
+    "exclude": [
+        "dist",
+        "**/*.spec.ts",
+        "**/*xxx*"
+      ], /* includes an array of glob patterns of files to be excluded in the compilation process.*/
+}
